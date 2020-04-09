@@ -49,13 +49,19 @@ class App extends React.Component {
     })
   }
 
+  clearAll = () => {
+    this.setState({
+      todo: []
+    })
+  }
+
   render() {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
         <TodoForm addTask={this.addTask} />
         <br />
-        <TodoList todo={this.state.todo} toggle={this.toggleTask} completed={this.clearCompleted} />
+        <TodoList todo={this.state.todo} toggle={this.toggleTask} completed={this.clearCompleted} clearAll={this.clearAll} />
       </div>
     );
   }
