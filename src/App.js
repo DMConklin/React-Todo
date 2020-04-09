@@ -9,7 +9,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      todo: Data
+      todo: Data()
     }
   }
   render() {
@@ -18,7 +18,7 @@ class App extends React.Component {
         <h2>Welcome to your Todo App!</h2>
         <TodoForm />
         <br />
-        <TodoList />
+        <TodoList todo={this.state.todo} />
       </div>
     );
   }

@@ -6,7 +6,9 @@ import { Todo } from './';
 const TodoList = props => {
         return(
             <div>
-                <Todo />
+                {props.todo.map(thing => (
+                    <Todo thing={thing} key={thing.id} />
+                ))}
             </div>
         )
 }
