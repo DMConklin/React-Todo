@@ -1,12 +1,11 @@
 import React from 'react';
 
-class Todo extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-
-        }
-    }
+const Todo = props => {
+    return(
+        <div>
+            
+        </div>
+    )
 }
 
 export default Todo;
